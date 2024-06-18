@@ -1,0 +1,39 @@
+<div class="bg" style="background: linear-gradient(rgba(5,7,12,0.95), rgba(5,7,12,0.5)); height: 93vh;">
+    <nz-spin [nzSpinning]="isSpinning" [nzSize]="'large'" nzTip="Working...">
+        <div class="parent">
+            <div class="child">
+                <div nz-row class="imgDiv">
+                    <div nz-col nzSpan="24">
+                        <h1 style="margin-left: 104px;">Login</h1>
+                    </div>
+                </div>
+                <form nz-form [formGroup]="loginForm" class="login-form" (ngSubmit)="sumbitForm()">
+
+                    <nz-form-item>
+                        <nz-form-control  nzErrorTip="Please input your E-mail!">
+                            <nz-input-group nzPrefixIcon="user">
+                                <input type="text" nz-input formControlName="email" placeholder="Email"/>
+                            </nz-input-group>
+                        </nz-form-control>
+                    </nz-form-item>
+
+                    <nz-form-item>
+                        <nz-form-control  nzErrorTip="Please input your Password!">
+                            <nz-input-group nzPrefixIcon="lock">
+                                <input type="password" nz-input formControlName="password" placeholder="Password"/>
+                            </nz-input-group>
+                        </nz-form-control>
+                    </nz-form-item>
+
+                    
+
+                    <button nz-button class="login-form-button login-form-margin" [nzType]="'primary'">Login</button>
+                        Or <a routerLink="/signup">Register now!</a>
+                </form>
+            </div>
+        </div>
+    </nz-spin>
+</div>
+
+
+
